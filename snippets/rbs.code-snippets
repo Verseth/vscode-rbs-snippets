@@ -74,7 +74,7 @@
 
   "attr_accessor": {
     "scope": "rbs",
-    "prefix": ["attr_accessor", "setter and getter", "getter and setter"],
+    "prefix": ["attr_accessor", "setter and getter"],
     "description": "Define a setter and getter method.",
     "body": [
       "attr_accessor ${1:name}: ${2:Type}$0",
@@ -101,7 +101,7 @@
 
   "singleton type": {
     "scope": "rbs",
-    "prefix": ["singleton type", "class type", "module type"],
+    "prefix": ["singleton type"],
     "description": "Create a singleton type.\nClass singleton type denotes the type of a singleton object of a class.",
     "body": [
       "singleton(${TM_SELECTED_TEXT:${1:Type}})",
@@ -195,28 +195,55 @@
 
   "instance method": {
     "scope": "rbs",
-    "prefix": ["def", "instance method"],
-    "description": "Define an instance method",
+    "prefix": ["def"],
+    "description": "Define an instance method.",
     "body": [
       "def ${1:name}: (${2:ArgType}) -> ${3:ReturnType}$0",
     ],
   },
 
+  "instance method with block": {
+    "scope": "rbs",
+    "prefix": ["def block"],
+    "description": "Define an instance method with a block.",
+    "body": [
+      "def ${1:name}: (${2:ArgType}) ${3:?}{ (${4:BlockArgType}) -> ${5:BlockReturnType} } -> ${6:ReturnType}$0",
+    ],
+  },
+
   "singleton method": {
     "scope": "rbs",
-    "prefix": ["def self", "singleton method", "class method"],
+    "prefix": ["def self"],
     "description": "Define a singleton method",
     "body": [
       "def self.${1:name}: (${2:ArgType}) -> ${3:ReturnType}$0",
     ],
   },
 
+  "singleton method with block": {
+    "scope": "rbs",
+    "prefix": ["def self block"],
+    "description": "Define a singleton method with a block.",
+    "body": [
+      "def self.${1:name}: (${2:ArgType}) ${3:?}{ (${4:BlockArgType}) -> ${5:BlockReturnType} } -> ${6:ReturnType}$0",
+    ],
+  },
+
   "module function": {
     "scope": "rbs",
-    "prefix": ["def self?", "module function"],
-    "description": "Define a module function",
+    "prefix": ["def self?"],
+    "description": "Define a module function.",
     "body": [
       "def self?.${1:name}: (${2:ArgType}) -> ${3:ReturnType}$0",
+    ],
+  },
+
+  "module function with block": {
+    "scope": "rbs",
+    "prefix": ["def self? block"],
+    "description": "Define a module function with a block.",
+    "body": [
+      "def self?.${1:name}: (${2:ArgType}) ${3:?}{ (${4:BlockArgType}) -> ${5:BlockReturnType} } -> ${6:ReturnType}$0",
     ],
   },
 

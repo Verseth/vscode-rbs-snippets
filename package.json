@@ -3,14 +3,14 @@
   "displayName": "RBS Snippets",
   "description": "RBS snippets for VSCode",
   "publisher": "MateuszDrewniak",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "images/logo.jpeg",
   "repository": {
     "type": "git",
     "url": "https://github.com/Verseth/vscode-rbs-snippets"
   },
   "galleryBanner": {
-    "color": "#c0a96e",
+    "color": "#804c0c",
     "theme": "dark"
   },
   "license": "MIT",

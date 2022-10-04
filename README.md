@@ -18,10 +18,4 @@ Provides snippets for:
 - method aliases
 - etc.
 
-## Release Notes
-
-### 1.0.0
-
-Initial release of RBS Snippets
-
 **Enjoy!**
