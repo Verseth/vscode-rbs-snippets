@@ -1,0 +1,267 @@
+{
+  "module": {
+    "scope": "rbs",
+    "prefix": "module",
+    "description": "Define a module.",
+    "body": [
+      "module ${1:ModuleName}",
+      "\t$0",
+      "end"
+    ],
+  },
+
+  "module with constraint": {
+    "scope": "rbs",
+    "prefix": "module with constraint",
+    "description": "Define a module with a constraint.",
+    "body": [
+      "module ${1:ModuleName} : ${2:_Constraint}",
+      "\t$0",
+      "end"
+    ],
+  },
+
+  "class": {
+    "scope": "rbs",
+    "prefix": "class",
+    "description": "Define a class.",
+    "body": [
+      "class ${1:ClassName}",
+      "\t$0",
+      "end"
+    ],
+  },
+
+  "class with superclass": {
+    "scope": "rbs",
+    "prefix": ["class with super", "subclass"],
+    "description": "Define a subclass.",
+    "body": [
+      "class ${1:ClassName} < ${2:Superclass}",
+      "\t$0",
+      "end"
+    ],
+  },
+
+  "interface": {
+    "scope": "rbs",
+    "prefix": ["interface"],
+    "description": "Define an interface.",
+    "body": [
+      "interface _${1:InterfaceName}",
+      "\t$0",
+      "end"
+    ],
+  },
+
+  "attr_reader": {
+    "scope": "rbs",
+    "prefix": ["attr_reader", "getter"],
+    "description": "Define a getter method.",
+    "body": [
+      "attr_reader ${1:name}: ${2:Type}$0",
+    ],
+  },
+
+  "attr_writer": {
+    "scope": "rbs",
+    "prefix": ["attr_writer", "setter"],
+    "description": "Define a setter method.",
+    "body": [
+      "attr_writer ${1:name}: ${2:Type}$0",
+    ],
+  },
+
+  "attr_accessor": {
+    "scope": "rbs",
+    "prefix": ["attr_accessor", "setter and getter", "getter and setter"],
+    "description": "Define a setter and getter method.",
+    "body": [
+      "attr_accessor ${1:name}: ${2:Type}$0",
+    ],
+  },
+
+  "instance variable": {
+    "scope": "rbs",
+    "prefix": ["ivar", "instance variable"],
+    "description": "Define an instance variable.",
+    "body": [
+      "@${1:name}: ${2:Type}$0",
+    ],
+  },
+
+  "constant": {
+    "scope": "rbs",
+    "prefix": ["constant"],
+    "description": "Define a constant.",
+    "body": [
+      "${1:CONSTANT_NAME}: ${2:Type}$0",
+    ],
+  },
+
+  "singleton type": {
+    "scope": "rbs",
+    "prefix": ["singleton type", "class type", "module type"],
+    "description": "Create a singleton type.\nClass singleton type denotes the type of a singleton object of a class.",
+    "body": [
+      "singleton(${TM_SELECTED_TEXT:${1:Type}})",
+    ],
+  },
+
+  "record type": {
+    "scope": "rbs",
+    "prefix": ["record type", "hash literal"],
+    "description": "Create a record type.\nRecords are Hash objects, fixed set of keys, and heterogeneous.",
+    "body": [
+      "{ ${1:key}: ${2:Type}$0 }",
+    ],
+  },
+
+  "tuple type": {
+    "scope": "rbs",
+    "prefix": ["tuple type", "array literal"],
+    "description": "Create a tuple type.\nTuples are Array objects, fixed size and heterogeneous.",
+    "body": [
+      "[${1:FirstElementType}, ${2:SecondElementType}$0]",
+    ],
+  },
+
+  "union type": {
+    "scope": "rbs",
+    "prefix": ["union type"],
+    "description": "Create a union type.\nUnion type denotes a type of one of the given types.",
+    "body": [
+      "${1:FirstType} | ${2:SecondType}$0",
+    ],
+  },
+
+  "intersection type": {
+    "scope": "rbs",
+    "prefix": ["intersection type"],
+    "description": "Create an intersection type.\nIntersection type denotes a type of all of the given types.",
+    "body": [
+      "${1:FirstType} & ${2:SecondType}$0",
+    ],
+  },
+
+  "Array type": {
+    "scope": "rbs",
+    "prefix": ["Array"],
+    "description": "Create an Array type.",
+    "body": [
+      "Array[${TM_SELECTED_TEXT:${1:ElementType}}]",
+    ],
+  },
+
+  "Hash type": {
+    "scope": "rbs",
+    "prefix": ["Hash"],
+    "description": "Create a Hash type.",
+    "body": [
+      "Hash[${1:KeyType}, ${2:ValueType}]",
+    ],
+  },
+
+  "proc type": {
+    "scope": "rbs",
+    "prefix": ["proc type", "lambda", "anonymous function"],
+    "description": "Create a Proc type.",
+    "body": [
+      "^(${1:ArgType}) -> ${2:ReturnType}",
+    ],
+  },
+
+  "private": {
+    "scope": "rbs",
+    "prefix": ["private"],
+    "description": "Set methods below as private.",
+    "body": [
+      "private",
+      "",
+      "$0"
+    ],
+  },
+
+  "public": {
+    "scope": "rbs",
+    "prefix": ["public"],
+    "description": "Set methods below as public.",
+    "body": [
+      "public",
+      "",
+      "$0"
+    ],
+  },
+
+  "instance method": {
+    "scope": "rbs",
+    "prefix": ["def", "instance method"],
+    "description": "Define an instance method",
+    "body": [
+      "def ${1:name}: (${2:ArgType}) -> ${3:ReturnType}$0",
+    ],
+  },
+
+  "singleton method": {
+    "scope": "rbs",
+    "prefix": ["def self", "singleton method", "class method"],
+    "description": "Define a singleton method",
+    "body": [
+      "def self.${1:name}: (${2:ArgType}) -> ${3:ReturnType}$0",
+    ],
+  },
+
+  "module function": {
+    "scope": "rbs",
+    "prefix": ["def self?", "module function"],
+    "description": "Define a module function",
+    "body": [
+      "def self?.${1:name}: (${2:ArgType}) -> ${3:ReturnType}$0",
+    ],
+  },
+
+  "include": {
+    "scope": "rbs",
+    "prefix": ["include"],
+    "description": "Include a module or interface.",
+    "body": [
+      "include ${1:ModuleName}$0",
+    ],
+  },
+
+  "extend": {
+    "scope": "rbs",
+    "prefix": ["extend"],
+    "description": "Extend a module or interface.",
+    "body": [
+      "extend ${1:ModuleName}$0",
+    ],
+  },
+
+  "prepend": {
+    "scope": "rbs",
+    "prefix": ["prepend"],
+    "description": "Prepend a module or interface.",
+    "body": [
+      "prepend ${1:ModuleName}$0",
+    ],
+  },
+
+  "alias method": {
+    "scope": "rbs",
+    "prefix": ["alias"],
+    "description": "Define a method alias.",
+    "body": [
+      "alias ${1:new_name} ${2:original_name}$0",
+    ],
+  },
+
+  "type alias": {
+    "scope": "rbs",
+    "prefix": ["type alias"],
+    "description": "Define a type alias.",
+    "body": [
+      "type ${1:alias} = ${2:Type}",
+    ],
+  },
+}
