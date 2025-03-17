@@ -1,0 +1,128 @@
+{
+  "RBS signature": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig"],
+    "description": "Define an RBS signature",
+    "body": [
+      "#:${1: (${2:})} -> ${3:void}$0",
+    ],
+  },
+
+  "RBS signature with block": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig", "block"],
+    "description": "Define an RBS signature with a block",
+    "body": [
+      "#:${1: (${2:})} {${3: (${4:})} -> ${5:void} } -> ${6:void}$0",
+    ],
+  },
+
+  "RBS signature with self binding": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig", "block", "self"],
+    "description": "Define an RBS signature with a block",
+    "body": [
+      "#:${1: (${2:})} {${3: (${4:})}${5: [self: ${6:SelfType}]} -> ${7:void} } -> ${8:void}$0",
+    ],
+  },
+
+  "RBS getter signature": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig", "getter"],
+    "description": "Define an RBS getter signature",
+    "body": [
+      "#: -> ${1:ReturnType}$0",
+    ],
+  },
+
+  "RBS setter signature": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig", "setter"],
+    "description": "Define an RBS setter signature",
+    "body": [
+      "#: (${1:ParamType}) -> void$0",
+    ],
+  },
+
+  "RBS attribute signature": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig"],
+    "description": "Define an RBS attribute signature",
+    "body": [
+      "#: ${1:Type}$0",
+    ],
+  },
+
+  "attr_accessor with RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "attr", "accessor"],
+    "description": "Define an attribute with RBS",
+    "body": [
+      "#: ${2:Type}",
+      "attr_accessor :${1:name}",
+      "$0",
+    ],
+  },
+
+  "attr_reader with RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "attr", "reader", "getter"],
+    "description": "Define an `attribute_reader` with RBS",
+    "body": [
+      "#: ${2:Type}",
+      "attr_reader :${1:name}",
+      "$0",
+    ],
+  },
+
+  "attr_writer with RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "attr", "writer", "setter"],
+    "description": "Define an `attribute_writer` with RBS",
+    "body": [
+      "#: ${2:Type}",
+      "attr_writer :${1:name}",
+      "$0",
+    ],
+  },
+
+  "Method definition with RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "def"],
+    "description": "Define a method with RBS",
+    "body": [
+      "#:${4: (${5:})} -> ${6:void}$0",
+      "def ${1:name}${2:(${3:})}",
+      "\t${7:}",
+      "end",
+      "$0",
+    ],
+  },
+
+  "Method definition with block and RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "def", "block"],
+    "description": "Define a method with a block with RBS",
+    "body": [
+      "#:${4: (${5:})} {${6: (${7:})} -> ${8:void} } -> ${9:void}",
+      "def ${1:name}${2:(${3:})}",
+      "\t${10:}",
+      "end",
+      "$0",
+    ],
+  },
+
+
+  "Constructor with RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "init"],
+    "description": "Define a constructor with RBS",
+    "body": [
+      "#:${3: (${4:})} -> void",
+      "def initialize${1:(${2:})}",
+      "\t${5:}",
+      "end",
+      "$0",
+    ],
+  },
+}

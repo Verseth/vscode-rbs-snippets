@@ -1,5 +1,5 @@
 {
-  "module": {
+  "New module": {
     "scope": "rbs",
     "prefix": "module",
     "description": "Define a module.",
@@ -10,7 +10,7 @@
     ],
   },
 
-  "module with constraint": {
+  "New module with constraints": {
     "scope": "rbs",
     "prefix": "module with constraint",
     "description": "Define a module with a constraint.",
@@ -21,7 +21,7 @@
     ],
   },
 
-  "class": {
+  "New class": {
     "scope": "rbs",
     "prefix": "class",
     "description": "Define a class.",
@@ -32,7 +32,7 @@
     ],
   },
 
-  "class with superclass": {
+  "New class with superclass": {
     "scope": "rbs",
     "prefix": ["class with super", "subclass"],
     "description": "Define a subclass.",
@@ -43,7 +43,7 @@
     ],
   },
 
-  "interface": {
+  "New interface": {
     "scope": "rbs",
     "prefix": ["interface"],
     "description": "Define an interface.",
@@ -81,7 +81,7 @@
     ],
   },
 
-  "instance variable": {
+  "New instance variable": {
     "scope": "rbs",
     "prefix": ["ivar", "instance variable"],
     "description": "Define an instance variable.",
@@ -90,7 +90,7 @@
     ],
   },
 
-  "constant": {
+  "New constant": {
     "scope": "rbs",
     "prefix": ["constant"],
     "description": "Define a constant.",
@@ -99,7 +99,7 @@
     ],
   },
 
-  "singleton type": {
+  "Singleton type": {
     "scope": "rbs",
     "prefix": ["singleton type"],
     "description": "Create a singleton type.\nClass singleton type denotes the type of a singleton object of a class.",
@@ -108,7 +108,7 @@
     ],
   },
 
-  "record type": {
+  "Record type": {
     "scope": "rbs",
     "prefix": ["record type", "hash literal"],
     "description": "Create a record type.\nRecords are Hash objects, fixed set of keys, and heterogeneous.",
@@ -117,7 +117,7 @@
     ],
   },
 
-  "tuple type": {
+  "Tuple type": {
     "scope": "rbs",
     "prefix": ["tuple type", "array literal"],
     "description": "Create a tuple type.\nTuples are Array objects, fixed size and heterogeneous.",
@@ -126,7 +126,7 @@
     ],
   },
 
-  "union type": {
+  "Union type": {
     "scope": "rbs",
     "prefix": ["union type"],
     "description": "Create a union type.\nUnion type denotes a type of one of the given types.",
@@ -135,7 +135,7 @@
     ],
   },
 
-  "intersection type": {
+  "Intersection type": {
     "scope": "rbs",
     "prefix": ["intersection type"],
     "description": "Create an intersection type.\nIntersection type denotes a type of all of the given types.",
@@ -162,7 +162,7 @@
     ],
   },
 
-  "proc type": {
+  "Proc type": {
     "scope": "rbs",
     "prefix": ["proc type", "lambda", "anonymous function"],
     "description": "Create a Proc type.",
@@ -171,7 +171,7 @@
     ],
   },
 
-  "private": {
+  "Private section": {
     "scope": "rbs",
     "prefix": ["private"],
     "description": "Set methods below as private.",
@@ -182,7 +182,7 @@
     ],
   },
 
-  "public": {
+  "Public section": {
     "scope": "rbs",
     "prefix": ["public"],
     "description": "Set methods below as public.",
@@ -193,7 +193,7 @@
     ],
   },
 
-  "instance method": {
+  "New instance method": {
     "scope": "rbs",
     "prefix": ["def"],
     "description": "Define an instance method.",
@@ -202,7 +202,7 @@
     ],
   },
 
-  "instance method with block": {
+  "New instance method with block": {
     "scope": "rbs",
     "prefix": ["def block"],
     "description": "Define an instance method with a block.",
@@ -211,7 +211,7 @@
     ],
   },
 
-  "singleton method": {
+  "New singleton method": {
     "scope": "rbs",
     "prefix": ["def self"],
     "description": "Define a singleton method",
@@ -220,7 +220,7 @@
     ],
   },
 
-  "singleton method with block": {
+  "New singleton method with block": {
     "scope": "rbs",
     "prefix": ["def self block"],
     "description": "Define a singleton method with a block.",
@@ -229,7 +229,7 @@
     ],
   },
 
-  "module function": {
+  "New module function": {
     "scope": "rbs",
     "prefix": ["def self?"],
     "description": "Define a module function.",
@@ -238,7 +238,7 @@
     ],
   },
 
-  "module function with block": {
+  "New module function with block": {
     "scope": "rbs",
     "prefix": ["def self? block"],
     "description": "Define a module function with a block.",
@@ -247,7 +247,7 @@
     ],
   },
 
-  "include": {
+  "Include": {
     "scope": "rbs",
     "prefix": ["include"],
     "description": "Include a module or interface.",
@@ -256,7 +256,7 @@
     ],
   },
 
-  "extend": {
+  "Extend": {
     "scope": "rbs",
     "prefix": ["extend"],
     "description": "Extend a module or interface.",
@@ -265,7 +265,7 @@
     ],
   },
 
-  "prepend": {
+  "Prepend": {
     "scope": "rbs",
     "prefix": ["prepend"],
     "description": "Prepend a module or interface.",
@@ -274,21 +274,12 @@
     ],
   },
 
-  "alias method": {
+  "New method alias": {
     "scope": "rbs",
     "prefix": ["alias"],
     "description": "Define a method alias.",
     "body": [
       "alias ${1:new_name} ${2:original_name}$0",
-    ],
-  },
-
-  "type alias": {
-    "scope": "rbs",
-    "prefix": ["type alias"],
-    "description": "Define a type alias.",
-    "body": [
-      "type ${1:alias} = ${2:Type}",
     ],
   },
 }
