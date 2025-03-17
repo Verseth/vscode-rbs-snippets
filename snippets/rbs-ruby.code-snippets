@@ -1,4 +1,28 @@
 {
+  "RBS abstract tag": {
+    "scope": "ruby",
+    "prefix": ["rbs", "abstract"],
+    "description": "Add an abstract tag to an RBS signature",
+    "body": ["# @abstract$0"],
+  },
+
+  "RBS override tag": {
+    "scope": "ruby",
+    "prefix": ["rbs", "override"],
+    "description": "Add an override tag to an RBS signature",
+    "body": ["# @override$0"],
+  },
+
+  "RBS abstract signature": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig", "abstract"],
+    "description": "Define an abstract RBS signature",
+    "body": [
+      "# @abstract",
+      "#:${1: (${2:})} -> ${3:void}$0",
+    ],
+  },
+
   "RBS signature": {
     "scope": "ruby",
     "prefix": ["rbs", "sig"],
@@ -60,7 +84,6 @@
     "body": [
       "#: ${2:Type}",
       "attr_accessor :${1:name}",
-      "$0",
     ],
   },
 
@@ -71,7 +94,6 @@
     "body": [
       "#: ${2:Type}",
       "attr_reader :${1:name}",
-      "$0",
     ],
   },
 
@@ -82,7 +104,17 @@
     "body": [
       "#: ${2:Type}",
       "attr_writer :${1:name}",
-      "$0",
+    ],
+  },
+
+  "Abstract method definition with RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "def", "abstract"],
+    "description": "Define an abstract method with RBS",
+    "body": [
+      "# @abstract",
+      "#:${4: (${5:})} -> ${6:void}",
+      "def ${1:name}${2:(${3:})}; end",
     ],
   },
 
@@ -91,11 +123,22 @@
     "prefix": ["rbs", "def"],
     "description": "Define a method with RBS",
     "body": [
-      "#:${4: (${5:})} -> ${6:void}$0",
+      "#:${4: (${5:})} -> ${6:void}",
       "def ${1:name}${2:(${3:})}",
       "\t${7:}",
       "end",
-      "$0",
+    ],
+  },
+
+
+  "Abstract method definition with block and RBS": {
+    "scope": "ruby",
+    "prefix": ["rbs", "def", "abstract", "block"],
+    "description": "Define an abstract method with a block with RBS",
+    "body": [
+      "# @abstract",
+      "#:${4: (${5:})} {${6: (${7:})} -> ${8:void} } -> ${9:void}",
+      "def ${1:name}${2:(${3:})}; end",
     ],
   },
 
@@ -108,7 +151,6 @@
       "def ${1:name}${2:(${3:})}",
       "\t${10:}",
       "end",
-      "$0",
     ],
   },
 
@@ -122,7 +164,6 @@
       "def initialize${1:(${2:})}",
       "\t${5:}",
       "end",
-      "$0",
     ],
   },
 }
