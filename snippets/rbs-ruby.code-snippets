@@ -8,7 +8,7 @@
 
   "RBS as": {
     "scope": "ruby",
-    "prefix": ["rbs", "as"],
+    "prefix": ["rbs", "as", "cast"],
     "description": "Cast the type using RBS",
     "body": ["#: as ${1:Type}"],
   },

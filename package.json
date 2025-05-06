@@ -3,7 +3,7 @@
   "displayName": "RBS Snippets",
   "description": "RBS snippets for VSCode",
   "publisher": "MateuszDrewniak",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "icon": "images/logo.jpeg",
   "main": "./out/extension.js",
   "activationEvents": [
@@ -59,12 +59,28 @@
         "title": "RBS: convert sorbet sigs to RBS in the file"
       },
       {
+        "command": "rbs-snippets.convertRBSToSigsInFile",
+        "title": "RBS: convert RBS to sorbet sigs in the file"
+      },
+      {
         "command": "rbs-snippets.convertAssertionsToRBSInFile",
         "title": "RBS: convert sorbet assertions to RBS in the file"
       },
       {
         "command": "rbs-snippets.convertSigsAndAssertionsToRBSInFile",
         "title": "RBS: convert sorbet sigs and assertions to RBS in the file"
+      },
+      {
+        "command": "rbs-snippets.insertLet",
+        "title": "RBS: insert T.let"
+      },
+      {
+        "command": "rbs-snippets.insertMust",
+        "title": "RBS: insert T.must"
+      },
+      {
+        "command": "rbs-snippets.insertCast",
+        "title": "RBS: insert T.cast"
       }
     ]
   },

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2025-05-06
+
+### Added
+
+- Commands for inserting `T.let`, `T.must`, `T.cast` in inline RBS
+
 ## [1.2.0] - 2025-05-06
 
 ### Added
