@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2025-05-06
+
+### Added
+
+- Command for converting sorbet assertions to [inline RBS comments](https://railsatscale.com/2025-04-23-rbs-support-for-sorbet/)
+- New RBS snippets for type assertions and variable type definitions
+
 ## [1.1.2] - 2025-03-26
 
 ### Added

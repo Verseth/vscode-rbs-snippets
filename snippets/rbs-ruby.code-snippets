@@ -1,4 +1,25 @@
 {
+  "RBS must": {
+    "scope": "ruby",
+    "prefix": ["rbs", "must"],
+    "description": "Cast the type to non-nilable using RBS",
+    "body": ["#: as !nil$0"],
+  },
+
+  "RBS as": {
+    "scope": "ruby",
+    "prefix": ["rbs", "as"],
+    "description": "Cast the type using RBS",
+    "body": ["#: as ${1:Type}"],
+  },
+
+  "RBS let": {
+    "scope": "ruby",
+    "prefix": ["rbs", "let"],
+    "description": "Define the type of a variable/constant using RBS",
+    "body": ["#: ${1:Type}"],
+  },
+
   "RBS abstract tag": {
     "scope": "ruby",
     "prefix": ["rbs", "abstract"],
@@ -29,6 +50,17 @@
     "description": "Define an RBS signature",
     "body": [
       "#:${1: (${2:})} -> ${3:void}$0",
+    ],
+  },
+
+  "RBS multiline signature": {
+    "scope": "ruby",
+    "prefix": ["rbs", "sig"],
+    "description": "Define a multiline RBS signature",
+    "body": [
+      "#: (",
+      "#|   $0",
+      "#| ) -> ${1:void}"
     ],
   },
 
